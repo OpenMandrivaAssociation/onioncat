@@ -2,13 +2,13 @@
 # TODO add a initscript
 
 Name:		onioncat
-Version:	0.1.8
+Version:	0.1.10
 Release:	%mkrel 1
 Summary:	Anonymizing VPN over Tor
 URL:		http://www.abenteuerland.at/onioncat/
 Group:		Networking/Other
 License:	GPLv3
-Source0:	http://www.abenteuerland.at/onioncat/%{name}-%{version}.tar.gz
+Source0:	http://www.abenteuerland.at/onioncat/%{name}-%{version}-433M.tar.gz
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -18,7 +18,7 @@ on a location hidden basis. You can think of it as a point-to-multipoint VPN
 between hidden services.
 
 %prep
-%setup -q 
+%setup -q -n %{name}-%{version}-433M 
 
 %build
 %configure2_5x
@@ -44,4 +44,4 @@ rm -rf ${RPM_BUILD_ROOT}
 %defattr(-,root,root)
 %doc AUTHORS ChangeLog 
 %{_bindir}/*
-
+%{_mandir}/man1/*
