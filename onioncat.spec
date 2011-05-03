@@ -3,7 +3,7 @@
 
 Name:		onioncat
 Version:	0.1.13
-Release:	%mkrel 2
+Release:	%mkrel 3
 Summary:	Anonymizing VPN over Tor
 URL:		http://www.cypherpunk.at/onioncat/
 Group:		Networking/Other
