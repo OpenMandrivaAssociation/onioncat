@@ -2,14 +2,13 @@
 # TODO add a initscript
 
 Name:		onioncat
-Version:	0.1.13
-Release:	%mkrel 3
+Version:	0.2.1
+Release:	1
 Summary:	Anonymizing VPN over Tor
 URL:		http://www.cypherpunk.at/onioncat/
 Group:		Networking/Other
 License:	GPLv3
-Source0:	http://www.cypherpunk.at/ocat/download/Source/%{version}/%{name}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Source0:	http://www.cypherpunk.at/ocat/download/Source/0.2.1/%{name}-%{version}.tar.gz
 
 %description
 OnionCat creates a transparent IP layer on top of Tor's hidden services.
@@ -25,14 +24,11 @@ between hidden services.
 %make
 
 %install
-rm -rf ${RPM_BUILD_ROOT}
-
 %makeinstall
-rm -Rf $RPM_BUILD_ROOT/usr/include/
-rm -Rf $RPM_BUILD_ROOT/usr/share/doc/*
+rm -Rf %{buildroot}/usr/include/
+rm -Rf %{buildroot}/usr/share/doc/*
 
 %clean
-rm -rf ${RPM_BUILD_ROOT}
 
 #%pre
 #%_pre_useradd %{runuser} / /bin/false
@@ -67,5 +63,6 @@ rm -rf ${RPM_BUILD_ROOT}
 * Mon Dec 29 2008 Michael Scherer <misc@mandriva.org> 0.1.8-1mdv2009.1
 + Revision: 321265
 - import onioncat
+
 
 
