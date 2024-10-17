@@ -5,7 +5,7 @@ Name:		onioncat
 Version:	0.2.1
 Release:	2
 Summary:	Anonymizing VPN over Tor
-URL:		http://www.cypherpunk.at/onioncat/
+URL:		https://www.cypherpunk.at/onioncat/
 Group:		Networking/Other
 License:	GPLv3
 Source0:	http://www.cypherpunk.at/ocat/download/Source/0.2.1/%{name}-%{version}.tar.gz
