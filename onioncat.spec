@@ -10,6 +10,11 @@ Group:		Networking/Other
 License:	GPLv3
 Source0:	http://www.cypherpunk.at/ocat/download/Source/0.2.1/%{name}-%{version}.tar.gz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 OnionCat creates a transparent IP layer on top of Tor's hidden services.
 It transmits any kind of IP-based data transparently through the Tor network 
